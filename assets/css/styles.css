@@ -183,7 +183,7 @@ li.footer {
 
 .news {
   height: 115px;
-  min-height: 100px;
+  min-height: 210px;
   width: 362px;
   display: flex;
   align-items: center;
@@ -193,6 +193,22 @@ li.footer {
   padding: 10px;
   margin-bottom: 25px;
   text-align: center;
+}
+
+@media (min-width: 576px) {
+  .news {
+    height: 115px;
+    min-height: 100px;
+    width: 362px;
+    display: flex;
+    align-items: center;
+    background: var(--bs-white);
+    margin-top: -10px;
+    box-shadow: 0px 2px 16px 2px rgba(26,22,42,0.46);
+    padding: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
 }
 
 @media (min-width: 576px) {
@@ -309,12 +325,285 @@ li.footer {
 #blog-scroll {
   overflow-x: scroll;
   display: flex;
+  justify-content: start;
   flex-wrap: nowrap;
   padding: 15px;
+  /*width: 100%;*/
 }
 
 .blog-card {
-  width: 340px;
+  min-width: 305px;
   box-shadow: 0px 0px 14px rgba(46,54,61,0.15);
+}
+
+#events-card {
+  background: #698ec5;
+  color: rgb(255,255,255);
+  border-radius: 7px;
+  margin-bottom: 40px;
+  min-width: 285px;
+}
+
+@media (min-width: 300px) {
+  #events-card {
+    max-width: 285px;
+  }
+}
+
+@media (min-width: 576px) {
+  #events-card {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 768px) {
+  #events-card {
+    max-width: 719px;
+  }
+}
+
+@media (min-width: 992px) {
+  #events-card {
+    max-width: 950px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #events-card {
+    max-width: 1090px;
+  }
+}
+
+.event-image {
+  object-fit: cover;
+  object-position: center;
+  height: 300px;
+  width: 283px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+@media (min-width: 576px) {
+  .event-image {
+    height: 300px;
+    width: 448px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+}
+
+@media (min-width: 768px) {
+  .event-image {
+    height: 431px;
+    width: 326px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 7px;
+  }
+}
+
+@media (min-width: 992px) {
+  .event-image {
+    height: 340px;
+    width: 350px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 7px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .event-image {
+    height: 300px;
+    width: 350px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 7px;
+  }
+}
+
+.blog-scroller {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin-left: 17px;
+  padding-bottom: 20px;
+  padding-left: 12px;
+}
+
+@media (min-width: 768px) {
+  .blog-scroller {
+    margin-left: 65px;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog-scroller {
+    margin-left: 105px;
+  }
+}
+
+.blog-scroller::-webkit-scrollbar {
+  width: 0px;
+}
+
+.blog-card {
+  margin-right: 20px;
+  border-style: none;
+  border-radius: 8px;
+}
+
+.blog-title {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .blog-title {
+    padding: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog-title {
+    padding: 60px;
+    padding-left: 100px;
+  }
+}
+
+.fit-cover {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.event-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 90px;
+  padding-left: 54px;
+  padding-right: 54px;
+}
+
+@media (min-width: 300px) {
+  .event-section {
+    padding: 45px;
+    padding-left: 35px;
+    padding-right: 54px;
+  }
+}
+
+@media (min-width: 768px) {
+  .event-section {
+    padding: 45px;
+    padding-left: 55px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .event-section {
+    padding: 45px;
+    padding-left: 100px;
+    padding-right: 40px;
+  }
+}
+
+#events-card {
+  background: #dfe3fb;
+  color: rgb(255,255,255);
+  border-radius: 7px;
+}
+
+h5 {
+}
+
+@media (min-width: 300px) {
+  #department-div {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) {
+  #department-div {
+    flex-direction: row;
+  }
+}
+
+#department-text {
+  padding: 20px;
+}
+
+#section-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  #section-form {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  #section-form {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+#reg-image {
+  height: 350px;
+  width: 100%;
+  background: url("../../assets/img/GloryFest%202021_32.jpg") center / cover no-repeat;
+}
+
+@media (min-width: 768px) {
+  #reg-image {
+    height: 910px;
+  }
+}
+
+@media (min-width: 992px) {
+  #reg-image {
+    height: 775px;
+  }
+}
+
+#reg-form {
+  height: 910px;
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 992px) {
+  #reg-form {
+    height: 775px;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+#btn-form-prev {
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #ffffff;
+  border-style: solid;
+  border-color: #040054;
+  color: #040054;
+}
+
+.donate-text-1 {
+  padding-bottom: 10px;
 }
 

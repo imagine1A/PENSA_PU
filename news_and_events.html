@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/Articles-Cards.css">
     <link rel="stylesheet" href="assets/css/Features-Image.css">
     <link rel="stylesheet" href="assets/css/Footer-Multi-Column.css">
+    <link rel="stylesheet" href="assets/css/Multi-step-form.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -36,74 +37,98 @@
         <h3>News and Events</h3>
         <p style="font-size: 13px;">Home - News and Events</p>
     </section>
-    <section style="display: flex;align-items: start;justify-content: center;flex-direction: column;padding: 50px;padding-left: 115px;background-color: rgb(245,246,252);">
-        <p style="color: #040054;">OUR BLOG</p>
-        <h3 style="color: rgb(0,0,0);">Catch up with our Latest News</h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right" style="font-size: 22px;align-self: end;">
-            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-        </svg>
-        <div class="container py-4 py-xl-5" style="margin-left: -25px;">
-            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" id="blog-scroll">
-                <div class="col blog">
-                    <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/GloryFest%202021_144.jpg">
-                        <div class="card-body p-4">
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        </div>
-                    </div>
+    <section style="background-color: rgb(245,246,252);padding-bottom: 45px;">
+        <section class="blog-title">
+            <p style="color: #040054;">OUR BLOG</p>
+            <h3 style="color: rgb(0,0,0);">Catch up with our Latest News</h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right" style="font-size: 22px;align-self: end;">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+            </svg>
+        </section>
+        <div class="blog-scroller">
+            <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/GloryFest%202021_144.jpg">
+                <div class="card-body p-4">
+                    <h5 class="card-title">Lorem libero donec</h5>
+                    <p class="card-text" style="font-size: 14px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                    <div style="float: right;"><button class="btn btn-primary" type="button" style="color: #040054;background: var(--bs-white);border-style: none;width: 142px;font-size: 14px;">READ MORE&nbsp;<i class="fas fa-arrow-right"></i></button></div>
                 </div>
-                <div class="col blog">
-                    <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/IMG_6603.jpg">
-                        <div class="card-body p-4">
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/IMG_6501.jpg">
+                <div class="card-body p-4">
+                    <h5 class="card-title">Lorem libero donec</h5>
+                    <p class="card-text" style="font-size: 14px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                    <div style="float: right;font-size: 14px;"><button class="btn btn-primary" type="button" style="color: #040054;background: var(--bs-white);border-style: none;width: 142px;font-size: 14px;">READ MORE&nbsp;<i class="fas fa-arrow-right"></i></button></div>
                 </div>
-                <div class="col blog">
-                    <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/GloryFest%202021_26.jpg">
-                        <div class="card-body p-4">
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/IMG_6156.jpg">
+                <div class="card-body p-4">
+                    <h5 class="card-title">Lorem libero donec</h5>
+                    <p class="card-text" style="font-size: 14px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                    <div style="float: right;"><button class="btn btn-primary" type="button" style="color: #040054;background: var(--bs-white);border-style: none;width: 142px;font-size: 14px;">READ MORE&nbsp;<i class="fas fa-arrow-right"></i></button></div>
                 </div>
-                <div class="col blog">
-                    <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/image-2.jpg">
-                        <div class="card-body p-4">
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/casual%20sunday-10.jpg">
+                <div class="card-body p-4">
+                    <h5 class="card-title">Lorem libero donec</h5>
+                    <p class="card-text" style="font-size: 14px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                    <div style="float: right;"><button class="btn btn-primary" type="button" style="color: #040054;background: var(--bs-white);border-style: none;width: 142px;font-size: 14px;">READ MORE&nbsp;<i class="fas fa-arrow-right"></i></button></div>
                 </div>
-                <div class="col blog">
-                    <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/IMG_1170.jpg">
-                        <div class="card-body p-4">
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="card blog-card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/IMG_6603.jpg">
+                <div class="card-body p-4">
+                    <h5 class="card-title">Lorem libero donec</h5>
+                    <p class="card-text" style="font-size: 14px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                    <div style="float: right;"><button class="btn btn-primary" type="button" style="color: #040054;background: var(--bs-white);border-style: none;width: 142px;font-size: 14px;">READ MORE&nbsp;<i class="fas fa-arrow-right"></i></button></div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
-        <p>LATEST EVENTS</p>
-        <h4>Heading</h4>
-        <div style="padding: 7px;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <div class="container" style="background: #698ec5;color: rgb(255,255,255);border-radius: 7px;">
+    <section class="event-section">
+        <p style="color: #040054;">LATEST EVENTS</p>
+        <h4>Upcoming Events</h4>
+        <div style="display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 0px;">
+            <div class="container" id="events-card">
                 <div class="row">
-                    <div class="col-md-6 col-lg-4 col-xxl-3" style="padding-left: 0px;">
-                        <div style="background: url(&quot;assets/img/GloryFest%202021_72.jpg&quot;) center / cover no-repeat;height: 300px;width: 300px;border-top-left-radius: 7px;border-bottom-left-radius: 7px;"></div>
+                    <div class="col-md-6 col-lg-5 col-xxl-4" style="display: flex;align-items: start;padding: 0px;">
+                        <div style="display: flex;align-items: start;justify-content: center;"><img class="event-image" src="assets/img/GloryFest%202021_72.jpg"></div>
                     </div>
-                    <div class="col-md-6 col-lg-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus felis et libero scelerisque, sed aliquet nulla tincidunt. Quisque lorem nisl, semper vitae mattis nec, vestibulum nec risus. Sed ut volutpat tortor, ut sodales diam. Integer at tristique turpis. Integer orci leo, fringilla ac aliquet vitae, condimentum non lorem. Duis velit ex, aliquam vel pellentesque et, dictum vitae mauris. Vestibulum commodo luctus tortor eu ultrices. Fusce commodo enim non eros consectetur maximus. Donec venenatis dolor ut vestibulum fermentum. Aliquam malesuada sit amet nulla id imperdiet. Suspendisse maximus purus et ligula maximus, a luctus ante fringilla.</div>
+                    <div class="col-md-6 col-lg-7 col-xxl-8" style="color: rgb(0,0,0);padding: 43px;">
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                        <p style="color: rgb(82,82,82);">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-clock" style="color: rgb(0,0,0);font-weight: bold;font-size: 18px;">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
+                            </svg>&nbsp;15th August, 2022</p>
+                        <p style="color: rgb(82,82,82);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus felis et libero scelerisque, sed aliquet nulla tincidunt. Quisque lorem nisl, semper vitae mattis nec, vestibulum nec risus. Sed ut volutpat tortor, ut sodales diam. Integer at tristique </p>
+                    </div>
                 </div>
             </div>
-            <div class="container" style="background: #698ec5;color: rgb(255,255,255);border-radius: 7px;">
+            <div class="container" id="events-card">
                 <div class="row">
-                    <div class="col-md-6 col-lg-4 col-xxl-3" style="padding-left: 0px;">
-                        <div style="background: url(&quot;assets/img/GloryFest%202021_72.jpg&quot;) center / cover no-repeat;height: 300px;width: 300px;border-top-left-radius: 7px;border-bottom-left-radius: 7px;"></div>
+                    <div class="col-md-6 col-lg-5 col-xxl-4" style="display: flex;align-items: start;padding: 0px;">
+                        <div style="display: flex;align-items: start;justify-content: center;"><img class="event-image" src="assets/img/GloryFest%202021_72.jpg"></div>
                     </div>
-                    <div class="col-md-6 col-lg-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus felis et libero scelerisque, sed aliquet nulla tincidunt. Quisque lorem nisl, semper vitae mattis nec, vestibulum nec risus. Sed ut volutpat tortor, ut sodales diam. Integer at tristique turpis. Integer orci leo, fringilla ac aliquet vitae, condimentum non lorem. Duis velit ex, aliquam vel pellentesque et, dictum vitae mauris. Vestibulum commodo luctus tortor eu ultrices. Fusce commodo enim non eros consectetur maximus. Donec venenatis dolor ut vestibulum fermentum. Aliquam malesuada sit amet nulla id imperdiet. Suspendisse maximus purus et ligula maximus, a luctus ante fringilla.</div>
+                    <div class="col-md-6 col-lg-7 col-xxl-8" style="padding: 43px;">
+                        <h5 style="color: rgb(0,0,0);">Lorem ipsum dolor sit amet</h5>
+                        <p style="color: rgb(82,82,82);">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-clock" style="color: rgb(0,0,0);font-weight: bold;font-size: 18px;">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
+                            </svg>&nbsp;15th August, 2022</p>
+                        <p style="color: rgb(82,82,82);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus felis et libero scelerisque, sed aliquet nulla tincidunt. Quisque lorem nisl, semper vitae mattis nec, vestibulum nec risus. Sed ut volutpat tortor, ut sodales diam. Integer at tristique </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="events-card">
+                <div class="row">
+                    <div class="col-md-6 col-lg-5 col-xxl-4" style="display: flex;align-items: start;padding: 0px;">
+                        <div style="display: flex;align-items: start;justify-content: center;"><img class="event-image" src="assets/img/GloryFest%202021_72.jpg"></div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xxl-8" style="padding: 43px;">
+                        <h5 style="color: rgb(0,0,0);">Lorem ipsum dolor sit amet</h5>
+                        <p style="color: rgb(82,82,82);">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-clock" style="color: rgb(0,0,0);font-weight: bold;font-size: 18px;">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
+                            </svg>&nbsp;15th August, 2022</p>
+                        <p style="color: rgb(82,82,82);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus felis et libero scelerisque, sed aliquet nulla tincidunt. Quisque lorem nisl, semper vitae mattis nec, vestibulum nec risus. Sed ut volutpat tortor, ut sodales diam. Integer at tristique </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,6 +189,7 @@
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Multi-step-form.js"></script>
 </body>
 
 </html>

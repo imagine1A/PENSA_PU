@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="assets/css/Articles-Cards.css">
     <link rel="stylesheet" href="assets/css/Features-Image.css">
     <link rel="stylesheet" href="assets/css/Footer-Multi-Column.css">
+    <link rel="stylesheet" href="assets/css/Multi-step-form.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md bg-white">
+    <nav class="navbar navbar-light navbar-expand-md bg-white" style="box-shadow: -4px -1px 9px 0px rgb(86,109,132);">
         <div class="container-fluid"><a class="navbar-brand" href="index.html" style="color: #040054;">Brand</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
@@ -32,10 +33,183 @@
             </div>
         </div>
     </nav>
-    <section id="banner-donate">
-        <h2>Registration</h2>
-        <p style="font-size: 14px;">Home - Rgistration</p>
-        <h2>Coming Soon</h2>
+    <section id="section-form">
+        <div id="reg-image"></div>
+        <div id="reg-form">
+            <p style="font-size: 14px;color: #040054;">REGISTRATION</p>
+            <h4 style="color: rgb(0,0,0);">Register with us</h4>
+            <section style="height: 598px;">
+                <div id="multple-step-form-n" class="container" style="margin-bottom: 0px;align-items: center;">
+                    <div id="progress-bar-button" class="multisteps-form">
+                        <div class="row-inner">
+                            <div class="col-12 col-lg-12 ml-auto mr-auto" style="margin: 0px;padding: 0px;">
+                                <div class="multisteps-form__progress"><a class="btn multisteps-form__progress-btn js-active" role="button" title="User Info" style="margin-right: 15px;"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="multistep-start-row" class="row">
+                        <div id="multistep-start-column" class="col-12 col-lg-12" style="margin: 0px;padding: 0px;">
+                            <form id="main-form" class="multisteps-form__form" style="height: 100px;">
+                                <div id="single-form-next" class="multisteps-form__panel p-4 js-active" data-animation="scaleIn" style="background: transparent;">
+                                    <div id="form-content" class="multisteps-form__content">
+                                        <h5 style="color: rgb(0,0,0);">Personal Details</h5>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Frist Name" required=""></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Last Name" required=""></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="date" placeholder="Date of Birth" required=""></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Home Town"></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Residential Address"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="email" placeholder="Email" required=""></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="tel" placeholder="Contant"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="tel" placeholder="WhatsApp Contact"></div>
+                                        </div>
+                                        <div class="col-md-10 col-lg-4 col-xxl-4" id="gender" style="display: flex;padding-bottom: 19px;">
+                                            <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Male</label></div>
+                                            </div>
+                                            <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Female</label></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10 col-lg-4 col-xxl-4" id="marital_status">
+                                            <div class="status">
+                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Single</label></div>
+                                            </div>
+                                            <div class="status-1">
+                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-4"><label class="form-check-label" for="formCheck-4">Married</label></div>
+                                            </div>
+                                            <div class="status-2">
+                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-6"><label class="form-check-label" for="formCheck-6">Divorced</label></div>
+                                            </div>
+                                            <div class="status-3">
+                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-5"><label class="form-check-label" for="formCheck-5">Widow(er)</label></div>
+                                            </div>
+                                        </div>
+                                        <div id="next-button" class="button-row d-flex mt-4"><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next">NEXT&nbsp;<i class="fas fa-arrow-right"></i></button></div>
+                                    </div>
+                                </div>
+                                <div id="single-form-next-prev" class="multisteps-form__panel p-4 rounded" data-animation="scaleIn">
+                                    <div id="form-content-1" class="multisteps-form__content">
+                                        <h5 style="color: rgb(0,0,0);">Church Details</h5>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Church Name"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Location"></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Area"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="District"></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Local Assembly"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Local or District"></div>
+                                        </div>
+                                        <div class="row donate-text-1">
+                                            <div class="col-xxl-6">
+                                                <div id="Baptism" style="display: flex;padding-bottom: 15px;">
+                                                    <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-11"><label class="form-check-label" for="formCheck-11">Baptized</label></div>
+                                                    </div>
+                                                    <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;width: 143.1px;">
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-12"><label class="form-check-label" for="formCheck-12">Not Baptized</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-7">
+                                                <div id="communion" style="display: flex;padding-bottom: 5px;">
+                                                    <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                        <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-9"><label class="form-check-label" for="formCheck-9">Communicant</label></div>
+                                                    </div>
+                                                    <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                                                        <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-10"><label class="form-check-label" for="formCheck-10">Non Communicant</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row donate-text" style="padding-bottom: 0px;">
+                                            <div class="col-xl-7 col-xxl-6">
+                                                <div id="officer" style="display: flex;padding-bottom: 19px;">
+                                                    <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-7"><label class="form-check-label" for="formCheck-7">Church Officer</label></div>
+                                                    </div>
+                                                    <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;width: 143.1px;">
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-8"><label class="form-check-label" for="formCheck-8">Not an Officer</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-7">
+                                                <div id="officer-pos" style="display: flex;">
+                                                    <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="background: #ffffff;color: #040054;">Specify if officer</button>
+                                                        <div class="dropdown-menu" style="border-style: solid;border-color: #040054;"><a class="dropdown-item" href="#">Elder</a><a class="dropdown-item" href="#">Deacon</a><a class="dropdown-item" href="#">Deaconess</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="next-prev-buttons" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev" type="button" title="Prev" style="margin-right: 15px;">PREVIOUS&nbsp;<i class="fas fa-arrow-left"></i></button><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next">NEXT&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button></div>
+                                    </div>
+                                </div>
+                                <div id="single-form-next-prev-1" class="multisteps-form__panel p-4" data-animation="scaleIn">
+                                    <div id="form-content-2" class="multisteps-form__content">
+                                        <h5 style="color: rgb(0,0,0);">School Details</h5>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Faculty"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Program"></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Student ID"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Level"></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Hall/Hostel of Residence"></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-xxl-6">
+                                                <div id="Sponsor" style="display: flex;padding-bottom: 19px;">
+                                                    <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-13"><label class="form-check-label" for="formCheck-13">Church of Pentecost Sponsored&nbsp;</label></div>
+                                                    </div>
+                                                    <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;width: 245.1px;">
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-14"><label class="form-check-label" for="formCheck-14">Not Sponsored by Church of Pentecost</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="next-prev-buttons-1" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev" type="button" title="Prev" style="margin-right: 15px;">PREVIOUS&nbsp;<i class="fas fa-arrow-left"></i></button><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next">NEXT&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button></div>
+                                    </div>
+                                </div>
+                                <div id="single-form-next-prev-2" class="multisteps-form__panel p-4" data-animation="scaleIn">
+                                    <div id="form-content-3" class="multisteps-form__content">
+                                        <h5 style="color: rgb(0,0,0);">Family Details</h5>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Father's Name"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Occupation"></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Contact"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Specify if Church Officer"></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Mother's Name"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Occupation"></div>
+                                        </div>
+                                        <div class="row donate-text">
+                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Contact"></div>
+                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Specify if Church officer"></div>
+                                        </div>
+                                        <div id="next-prev-buttons-2" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev" type="button" title="Prev" style="margin-right: 15px;">PREVIOUS&nbsp;<i class="fas fa-arrow-left"></i></button><button class="btn btn btn-primary ml-auto" id="btn-form" type="submit" title="Register">REGISTER&nbsp;</button></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </section>
     <footer style="width: 100%;background: #002654;color: rgb(255,255,255);">
         <div class="container py-4 py-lg-5" style="color: #ffffff;">
@@ -93,6 +267,7 @@
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Multi-step-form.js"></script>
 </body>
 
 </html>
