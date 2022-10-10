@@ -607,3 +607,206 @@ h5 {
   padding-bottom: 10px;
 }
 
+@media (min-width: 992px) {
+  .about-us_images {
+    width: 60%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.about-us_images {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-us_banner {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (min-width: 992px) {
+  .about-us_banner {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.about-us_banner-text {
+  width: 100%;
+  min-height: 400px;
+}
+
+#image-4 {
+  height: 181px;
+  width: 137px;
+  background: url("../../assets/img/GloryFest%202021_82.jpg") center / cover;
+  z-index: 1;
+  margin-bottom: -126px;
+  margin-left: 19px;
+}
+
+@media (min-width: 576px) {
+  #image-4 {
+    height: 214px;
+    width: 190px;
+    background: url("../../assets/img/GloryFest%202021_82.jpg") center / cover;
+    z-index: 1;
+    margin-bottom: -126px;
+    margin-left: 19px;
+  }
+}
+
+@media (min-width: 768px) {
+  #image-4 {
+    height: 230px;
+    width: 200px;
+    background: url("../../assets/img/GloryFest%202021_82.jpg") center / cover;
+    z-index: 1;
+    margin-bottom: -126px;
+    margin-left: -67px;
+  }
+}
+
+#image-3 {
+  height: 168px;
+  width: 130px;
+  background: url("../../assets/img/IMG_1168.jpg") center/cover no-repeat;
+  z-index: 2;
+  margin-right: -190px;
+  margin-bottom: -182px;
+}
+
+@media (min-width: 576px) {
+  #image-3 {
+    height: 210px;
+    width: 190px;
+    background: url("../../assets/img/IMG_1168.jpg") center/cover no-repeat;
+    z-index: 2;
+    margin-right: -216px;
+    margin-bottom: -182px;
+  }
+}
+
+@media (min-width: 768px) {
+  #image-3 {
+    height: 250px;
+    width: 230px;
+    background: url("../../assets/img/IMG_1168.jpg") center/cover no-repeat;
+    z-index: 2;
+    margin: -4px 0px 0px;
+    margin-top: -1px;
+    margin-right: -214px;
+    margin-bottom: -182px;
+  }
+}
+
+#image-2 {
+  height: 180px;
+  width: 150px;
+  background: url("../../assets/img/IMG_6501.jpg") center/cover no-repeat;
+  z-index: 0;
+  margin-right: 162px;
+  margin-top: 12px;
+}
+
+@media (min-width: 576px) {
+  #image-2 {
+    height: 240px;
+    width: 190px;
+    background: url("../../assets/img/IMG_6501.jpg") center/cover no-repeat;
+    z-index: 0;
+    margin-right: 280px;
+    margin-top: -71px;
+  }
+}
+
+@media (min-width: 768px) {
+  #image-2 {
+    height: 250px;
+    width: 250px;
+    background: url("../../assets/img/IMG_6501.jpg") center/cover no-repeat;
+    z-index: 0;
+    margin-right: 355px;
+    margin-top: -85px;
+  }
+}
+
+#image-1 {
+  height: 200px;
+  width: 153px;
+  background: url("../../assets/img/IMG_6506.jpg") center/cover no-repeat;
+  z-index: -1;
+  margin-top: -35px;
+  margin-right: -39px;
+}
+
+@media (min-width: 576px) {
+  #image-1 {
+    height: 230px;
+    width: 190px;
+    background: url("../../assets/img/IMG_6506.jpg") center/cover no-repeat;
+    z-index: -1;
+    margin-top: -50px;
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  #image-1 {
+    height: 250px;
+    width: 200px;
+    background: url("../../assets/img/IMG_6506.jpg") center/cover no-repeat;
+    z-index: -1;
+    margin-top: -75px;
+    margin-right: 48px;
+  }
+}
+
+.tenets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 576px) {
+  .tenets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.final-tenet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 540px;
+}
+
+@media (min-width: 576px) {
+  .final-tenet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 540px;
+  }
+}
+
+.gallery {
+  border-radius: 5px;
+}
+
