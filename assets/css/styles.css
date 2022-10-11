@@ -97,7 +97,7 @@ body {
   object-fit: cover;
   object-position: center;
   height: 340px;
-  filter: brightness(75%);
+  filter: brightness(60%);
 }
 
 .donate-container {
@@ -250,7 +250,7 @@ li.footer {
 }
 
 .text-overlay {
-  top: 130px;
+  top: 225px;
   color: var(--bs-white);
   height: 100px;
 }
@@ -370,7 +370,7 @@ li.footer {
 
 @media (min-width: 1400px) {
   #events-card {
-    max-width: 1090px;
+    max-width: 1180px;
   }
 }
 
@@ -808,5 +808,44 @@ h5 {
 
 .gallery {
   border-radius: 5px;
+}
+
+.news.update {
+}
+
+.form-check {
+  margin-right: 5px;
+  margin-left: 25px;
+  padding: 5px;
+}
+
+#arrow-right {
+  font-size: 26px;
+  margin-right: -220px;
+  color: #040054;
+}
+
+@media (min-width: 576px) {
+  #arrow-right {
+    font-size: 26px;
+    margin-right: -325px;
+    color: #040054;
+  }
+}
+
+@media (min-width: 768px) {
+  #arrow-right {
+    font-size: 26px;
+    margin-right: -545px;
+    color: #040054;
+  }
+}
+
+@media (min-width: 992px) {
+  #arrow-right {
+    font-size: 26px;
+    margin-right: -748px;
+    color: #040054;
+  }
 }
 
