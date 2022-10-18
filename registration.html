@@ -42,8 +42,8 @@
                 <div id="multple-step-form-n" class="container" style="margin-bottom: 0px;align-items: center;">
                     <div id="progress-bar-button" class="multisteps-form">
                         <div class="row-inner">
-                            <div class="col-12 col-lg-12 ml-auto mr-auto" style="margin: 0px;padding: 0px;">
-                                <div class="multisteps-form__progress"><a class="btn multisteps-form__progress-btn js-active" role="button" title="User Info" style="margin-right: 15px;"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a></div>
+                            <div class="col-12 col-lg-10 ml-auto mr-auto" style="margin: 0px;padding: 0px;">
+                                <div class="multisteps-form__progress"><a class="btn multisteps-form__progress-btn js-active" role="button" title="User Info" style="margin-right: 15px;"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a><a class="btn multisteps-form__progress-btn" role="button" title="User Info"></a></div>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                                         </div>
                                         <div class="row donate-text">
                                             <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="date" placeholder="Date of Birth" required=""></div>
-                                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Home Town"></div>
+                                            <div class="col"><input class="form-control" type="text" placeholder="Home Town"></div>
                                         </div>
                                         <div class="row donate-text">
                                             <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Residential Address"></div>
@@ -201,7 +201,19 @@
                                             <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Contact"></div>
                                             <div class="col-lg-6"><input class="form-control" type="text" placeholder="Specify if Church officer"></div>
                                         </div>
-                                        <div id="next-prev-buttons-2" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev-2" type="button" title="Prev" style="margin-right: 15px;padding: 12px 40px;color: #040054;background: transparent;border-color: #040054;"><i class="fas fa-arrow-left"></i>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto" id="btn-form" type="submit" title="Register">REGISTER&nbsp;</button></div>
+                                        <div id="next-prev-buttons-2" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev-2" type="button" title="Prev" style="margin-right: 15px;padding: 12px 40px;color: #040054;background: transparent;border-color: #040054;"><i class="fas fa-arrow-left"></i>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next">NEXT&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button></div>
+                                    </div>
+                                </div>
+                                <div id="single-form-next-prev-3" class="multisteps-form__panel p-4" data-animation="scaleIn">
+                                    <div id="form-content-4" class="multisteps-form__content">
+                                        <h5 style="color: rgb(0,0,0);font-size: 18px;margin-bottom: 25px;">Image of User</h5>
+                                        <div class="row donate-text" style="display: flex;flex-direction: column;">
+                                            <div class="col-md-12 col-lg-6" id="imagePreview"><input class="form-control" type="file" id="inpFile" name="inpFile" onchange="showPreview(event);"></div>
+                                            <div class="col-lg-6 preview" id="image-preview">
+                                                <p id="txt">Image Preview</p><img id="file-ip-1-preview" class="image-preview_image" src="" alt="image preview">
+                                            </div>
+                                        </div>
+                                        <div id="next-prev-buttons-3" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev-3" type="button" title="Prev" style="margin-right: 15px;padding: 12px 40px;color: #040054;background: transparent;border-color: #040054;"><i class="fas fa-arrow-left"></i>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto" id="btn-form" type="submit" title="Register">REGISTER&nbsp;</button></div>
                                     </div>
                                 </div>
                             </form>
@@ -267,6 +279,7 @@
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/image_placeholder.js"></script>
     <script src="assets/js/Multi-step-form.js"></script>
 </body>
 

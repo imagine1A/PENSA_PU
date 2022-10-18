@@ -928,3 +928,29 @@ h5 {
   }
 }
 
+.image-preview_default-text {
+  display: block;
+}
+
+.image-preview_image {
+  display: none;
+  width: 100%;
+}
+
+#image-preview {
+  width: 400px;
+  min-height: 300px;
+  max-height: 350px;
+  border-radius: 6px;
+  border: 2px#040054 solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+#txt {
+  display: block;
+}
+
