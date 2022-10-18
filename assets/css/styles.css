@@ -935,7 +935,7 @@ h5 {
 .image-preview_image {
   display: none;
   width: 100%;
-  height: 350px;
+  height: 351px;
   object-position: center;
   object-fit: cover;
 }
