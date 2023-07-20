@@ -80,7 +80,7 @@
                     <div id="multistep-start-row" class="row">
                         <div id="multistep-start-column" class="col-12 col-lg-12" style="margin: 0px;padding: 0px;">
                             <form id="main-form" class="multisteps-form__form" style="height: 100px;">
-                                <div id="single-form-next" class="multisteps-form__panel p-4 js-active" data-animation="scaleIn" style="background: transparent;">
+                                <div id="single-form-next" class="multisteps-form__panel p-4" data-animation="scaleIn" style="background: transparent;">
                                     <div id="form-content" class="multisteps-form__content">
                                         <h5 style="color: rgb(0,0,0);font-size: 18px;">Personal Details</h5>
                                         <div class="row donate-text">
@@ -96,35 +96,26 @@
                                             <div class="col-lg-6"><input class="form-control" type="email" placeholder="Email" required=""></div>
                                         </div>
                                         <div class="row donate-text">
-                                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="tel" placeholder="Contant"></div>
                                             <div class="col-lg-6"><input class="form-control" type="tel" placeholder="WhatsApp Contact"></div>
                                         </div>
-                                        <div class="col-md-10 col-lg-4 col-xxl-4" id="gender" style="display: flex;padding-bottom: 30px;">
-                                            <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
-                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-1" name="gender"><label class="form-check-label" for="formCheck-1">Male</label></div>
-                                            </div>
-                                            <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
-                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;" name="gender"><input class="form-check-input" type="radio" id="formCheck-2" name="gender"><label class="form-check-label" for="formCheck-2">Female</label></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-10 col-lg-4 col-xxl-4" id="marital_status" style="padding-bottom: 10px;">
-                                            <div class="status">
-                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-3" name="marital-status"><label class="form-check-label" for="formCheck-3">Single</label></div>
-                                            </div>
-                                            <div class="status-1">
-                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-4" name="marital-status"><label class="form-check-label" for="formCheck-4">Married</label></div>
-                                            </div>
-                                            <div class="status-2">
-                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-6" name="marital-status"><label class="form-check-label" for="formCheck-6">Divorced</label></div>
-                                            </div>
-                                            <div class="status-3">
-                                                <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-5" name="marital-status"><label class="form-check-label" for="formCheck-5">Widow(er)</label></div>
-                                            </div>
-                                        </div>
-                                        <div id="next-button" class="button-row d-flex mt-4"><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next" style="padding: 12px 40px;">NEXT&nbsp;<i class="fas fa-arrow-right"></i></button></div>
+                                        <div class="col-md-10 col-lg-4 col-xxl-4" id="gender" style="display: flex;padding-bottom: 30px;"><select class="form-select">
+                                                <option value="0" selected="">Gender</option>
+                                                <option value="1">Male</option>
+                                                <option value="14">Female</option>
+                                            </select></div>
+                                        <div class="col-md-10 col-lg-4 col-xxl-4" id="marital_status" style="padding-bottom: 10px;"><select class="form-select">
+                                                <option value="0" selected="">Marital Status</option>
+                                                <option value="1">Single</option>
+                                                <option value="2">Married</option>
+                                                <option value="3">Divorced</option>
+                                                <option value="4">Widow(er)</option>
+                                            </select></div>
+                                        <div id="next-button" class="button-row d-flex mt-4"><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next" style="padding: 8px 24px;font-size: 14px;">NEXT&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right" style="font-size: 20px;">
+                                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                                </svg></button></div>
                                     </div>
                                 </div>
-                                <div id="single-form-next-prev" class="multisteps-form__panel p-4 rounded" data-animation="scaleIn">
+                                <div id="single-form-next-prev" class="multisteps-form__panel p-4 js-active" data-animation="scaleIn">
                                     <div id="form-content-1" class="multisteps-form__content">
                                         <h5 style="color: rgb(0,0,0);font-size: 18px;">Church Details</h5>
                                         <div class="row donate-text">
@@ -141,36 +132,27 @@
                                         </div>
                                         <div class="row donate-text-1">
                                             <div class="col-xxl-5">
-                                                <div id="Baptism" style="display: flex;padding-bottom: 25px;">
-                                                    <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
-                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-11" name="baptism"><label class="form-check-label" for="formCheck-11">Baptized</label></div>
-                                                    </div>
-                                                    <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;width: 143.1px;">
-                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-12" name="baptism"><label class="form-check-label" for="formCheck-12">Not Baptized</label></div>
-                                                    </div>
-                                                </div>
+                                                <div id="Baptism" style="display: flex;padding-bottom: 25px;"><select class="form-select">
+                                                        <option value="12" selected="">Baptism Status</option>
+                                                        <option value="1">Baptised</option>
+                                                        <option value="3">Not Baptised</option>
+                                                    </select></div>
                                             </div>
                                             <div class="col-xxl-5">
-                                                <div id="communion" style="display: flex;padding-bottom: 20px;">
-                                                    <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
-                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-9" name="communion"><label class="form-check-label" for="formCheck-9">Communicant</label></div>
-                                                    </div>
-                                                    <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
-                                                        <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-10" name="communion"><label class="form-check-label" for="formCheck-10">Non Communicant</label></div>
-                                                    </div>
-                                                </div>
+                                                <div id="communion" style="display: flex;padding-bottom: 20px;"><select class="form-select">
+                                                        <option value="12" selected="">Cmmunion Partaker</option>
+                                                        <option value="1">Communicant</option>
+                                                        <option value="14">Non Cmmuunicant</option>
+                                                    </select></div>
                                             </div>
                                         </div>
                                         <div class="row donate-text" style="padding-bottom: 0px;">
                                             <div class="col-xl-7 col-xxl-4">
-                                                <div id="officer" style="display: flex;padding-bottom: 28px;">
-                                                    <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
-                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-7" name="officer"><label class="form-check-label" for="formCheck-7">Church Officer</label></div>
-                                                    </div>
-                                                    <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;width: 143.1px;">
-                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-8" name="officer"><label class="form-check-label" for="formCheck-8">Not an Officer</label></div>
-                                                    </div>
-                                                </div>
+                                                <div id="officer" style="display: flex;padding-bottom: 28px;"><select class="form-select">
+                                                        <option value="0" selected="">Church Officer</option>
+                                                        <option value="1">I am a Church Officer</option>
+                                                        <option value="14">I am not a Church Officer</option>
+                                                    </select></div>
                                             </div>
                                             <div class="col-xxl-7">
                                                 <div id="officer-pos" style="display: flex;padding-bottom: 10px;">
@@ -180,7 +162,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="next-prev-buttons" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev" type="button" title="Prev" style="margin-right: 15px;padding: 12px 40px;"><i class="fas fa-arrow-left"></i>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next" style="padding: 12px 40px;">NEXT&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button></div>
+                                        <div id="next-prev-buttons" class="button-row d-flex mt-4" style="/*justify-content: space-between;*/"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev" type="button" title="Prev" style="margin-right: 15px;padding: 9px 12px;font-size: 14px;"><i class="fas fa-arrow-left"></i>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next" style="padding: 12px 25px;font-size: 14px;">NEXT&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button></div>
                                     </div>
                                 </div>
                                 <div id="single-form-next-prev-1" class="multisteps-form__panel p-4" data-animation="scaleIn">
@@ -208,8 +190,14 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col">
+                                                <div id="next-prev-buttons-1" class="button-row d-flex mt-4" style="/*justify-content: space-between;*/"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev-1" type="button" title="Prev" style="margin-right: 15px;padding: 12px 10px;background: rgba(4,0,84,0);border-color: #040054;color: #040054;font-size: 14px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-left" style="font-size: 21px;">
+                                                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"></path>
+                                                        </svg>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next" style="font-size: 14px;">NEXT&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right" style="font-size: 21px;">
+                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                                        </svg></button></div>
+                                            </div>
                                         </div>
-                                        <div id="next-prev-buttons-1" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev-1" type="button" title="Prev" style="margin-right: 15px;padding: 12px 40px;background: rgba(4,0,84,0);border-color: #040054;color: #040054;"><i class="fas fa-arrow-left"></i>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next">NEXT&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button></div>
                                     </div>
                                 </div>
                                 <div id="single-form-next-prev-2" class="multisteps-form__panel p-4" data-animation="scaleIn">
@@ -231,7 +219,11 @@
                                             <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Contact"></div>
                                             <div class="col-lg-6"><input class="form-control" type="text" placeholder="Specify if Church officer"></div>
                                         </div>
-                                        <div id="next-prev-buttons-2" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev-2" type="button" title="Prev" style="margin-right: 15px;padding: 12px 40px;color: #040054;background: transparent;border-color: #040054;"><i class="fas fa-arrow-left"></i>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next">NEXT&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button></div>
+                                        <div id="next-prev-buttons-2" class="button-row d-flex mt-4" style="/*justify-content: space-between;*/"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev-2" type="button" title="Prev" style="margin-right: 15px;padding: 12px 16px;color: #040054;background: transparent;border-color: #040054;font-size: 14px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-left" style="font-size: 21px;">
+                                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"></path>
+                                                </svg>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-form" type="button" title="Next">NEXT&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right" style="font-size: 21px;">
+                                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                                </svg></button></div>
                                     </div>
                                 </div>
                                 <div id="single-form-next-prev-3" class="multisteps-form__panel p-4" data-animation="scaleIn">
@@ -243,7 +235,9 @@
                                                 <p id="txt">Image Preview</p><img id="file-ip-1-preview" class="image-preview_image" src="" alt="image preview" height="auto">
                                             </div>
                                         </div>
-                                        <div id="next-prev-buttons-3" class="button-row d-flex" style="margin-top: 15px;"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev-3" type="button" title="Prev" style="margin-right: 15px;padding: 12px 40px;color: #040054;background: transparent;border-color: #040054;"><i class="fas fa-arrow-left"></i>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto" id="btn-form" type="submit" title="Register">REGISTER&nbsp;</button></div>
+                                        <div id="next-prev-buttons-3" class="button-row d-flex" style="margin-top: 15px;/*justify-content: space-between;*/"><button class="btn btn btn-primary js-btn-prev" id="btn-form-prev-3" type="button" title="Prev" style="margin-right: 15px;padding: 12px 15px;color: #040054;background: transparent;border-color: #040054;font-size: 14px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-left" style="font-size: 21px;">
+                                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"></path>
+                                                </svg>&nbsp;PREVIOUS&nbsp;</button><button class="btn btn btn-primary ml-auto" id="btn-form" type="submit" title="Register">REGISTER&nbsp;</button></div>
                                     </div>
                                 </div>
                             </form>

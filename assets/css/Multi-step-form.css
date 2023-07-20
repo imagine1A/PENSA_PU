@@ -312,8 +312,7 @@ body a {
 
 #btn-form {
   background: #040054;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding: 0px 18px;
   border: none;
 }
 
@@ -325,7 +324,7 @@ body a {
   border-width: 1px;
   border-style: solid;
   border-radius: 6px;
-  height: 825px;
+  height: 835px;
 }
 
 @media (min-width: 576px) {
