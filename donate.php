@@ -1,133 +1,3 @@
-<?php
-//error_reporting(0);
-
-// Include config file
-require_once "config.php";
-
-$query = "SELECT userid FROM donations ORDER BY userid DESC";
-$result = mysqli_query($conn, $query);
-$row = mysqli_fetch_array($result);
-$lastid = $row['userid'];
-if (empty($lastid)) {
-    $number = "PENSAPUD-000001";
-} else {
-    $idd = str_replace("PENSAPUD-", "", $lastid);
-    $id = str_pad($idd + 1, 6, 0, STR_PAD_LEFT);
-    $number = 'PENSAPUD-' . $id;
-}
-
-// Define variables and initialize with empty values
-$firstname = $lastname = $email = $address = $state = $zipcode = $country = $phonenumber = $amount = $paymentmode = "";
-$firstname_err = $lastname_err = $email_err = $address_err = $state_err = $zipcode_err = $country_err = $phonenumber_err = $amount_err = $paymentmode_err = "";
-$Pid = $number;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // Validate firstname
-    if (empty(trim($_POST["firstname"]))) {
-        $firstname_err = "Please enter your First Name.";
-    } elseif (!preg_match("/^[a-zA-z]*$/", trim($_POST["firstname"]))) {
-        $firstname_err = "Firstname can only contain letters.";
-    } else {
-        $firstname = trim($_POST["firstname"]);
-    }
-
-
-    // Validate lastname
-    if (empty(trim($_POST["lastname"]))) {
-        $lastname_err = "Please enter your Last Name.";
-    } elseif (!preg_match("/^[a-zA-z]*$/", trim($_POST["lastname"]))) {
-        $lastname_err = "Last name can only contain letters.";
-    } else {
-        $lastname = trim($_POST["lastname"]);
-    }
-
-
-    // Validate ADDRESS
-    if (empty(trim($_POST["address"]))) {
-        $address_err = "Please enter your address";
-    } else {
-        $address = trim($_POST["address"]);
-    }
-
-
-    //Validate EMAIL
-    if (empty(trim($_POST["email"]))) {
-        $email_err = "Please enter your Email.";
-    } elseif (!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^", trim($_POST["email"]))) {
-        $email_err = "Enter a valid email.";
-    } else {
-        $email = trim($_POST["email"]);
-    }
-
-    // Validate PHONENUMBER
-    if (empty(trim($_POST["phonenumber"]))) {
-        $phonenumber_err = "Please enter your phone number";
-    } else {
-        $phonenumber = trim($_POST["phonenumber"]);
-    }
-
-    // Validate STATE
-    if (empty(trim($_POST["state"]))) {
-        $state_err = "Please select your state";
-    } else {
-        $state = trim($_POST["state"]);
-    }
-
-
-    // Validate ZIPCODE
-    if (empty(trim($_POST["zipcode"]))) {
-        $zipcode_err = "Please enter zipcode";
-    } else {
-        $zipcode = trim($_POST["zipcode"]);
-    }
-
-    // Validate COUNTRY
-    if (empty(trim($_POST["country"]))) {
-        $country_err = "Please enter your country";
-    } else {
-        $country = trim($_POST["country"]);
-    }
-    // Validate PAYMENT
-    if (empty(trim($_POST["paymentmode"]))) {
-        $paymentmode_err = "Please select your payment mode";
-    } else {
-        $paymentmode = trim($_POST["paymentmode"]);
-    }
-
-    // Validate AMOUNT
-    if (empty(trim($_POST["amount"]))) {
-        $amount_err = "Please enter your payment amount";
-    } else {
-        $amount = trim($_POST["amount"]);
-    }
-
-    if (empty($firstname_err) && empty($lastname_err) && empty($email_err) && empty($address_err) && empty($state_err) && empty($zipcode_err) && empty($country_err) && empty($phonenumber_err) && empty($amount_err) && empty($amount_err)) {
-
-
-        // Prepare an insert statement
-        $sql = "INSERT INTO donations (userid, firstname, lastname, email,address, state, zipcode, country, phonenumber, amount, paymentmode ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-        if ($stmt = mysqli_prepare($conn, $sql)) {
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssssssssss", $Pid, $firstname, $lastname, $email, $address, $state, $zipcode, $country, $phonenumber, $amount, $paymentmode);
-
-            // Attempt to execute the prepared statement
-            if (mysqli_stmt_execute($stmt)) {
-                // Redirect to login page
-                echo '<script>alert("Donation Successful!")</script>';
-            } else {
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-
-            // Close statement
-            mysqli_stmt_close($stmt);
-        }
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,6 +5,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>PENSA PU</title>
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans&amp;display=swap">
@@ -179,16 +55,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </section>
         <nav class="navbar navbar-light navbar-expand-md margin-nav">
-            <div class="container-fluid"><a class="navbar-brand" href="index.php" style="color: #040054;padding: 0px;"><img src="assets/img/pensa-PU.png" width="60" height="60" style="margin-bottom: -10px;margin-top: -8px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container-fluid"><a class="navbar-brand" href="index.html" style="color: #040054;padding: 0px;"><img src="assets/img/pensa-PU.png" width="60" height="60" style="margin-bottom: -10px;margin-top: -8px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon hamburger-nav"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-2" style="flex-wrap: wrap;">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link otherpages" href="index.php" style="padding-right: 0px;padding-left: 0px;margin-right: 15px;color: #fff;">Home</a></li>
+                        <li class="nav-item"><a class="nav-link otherpages" href="index.html" style="padding-right: 0px;padding-left: 0px;margin-right: 15px;color: #fff;">Home</a></li>
                         <li class="nav-item"><a class="nav-link otherpages" href="about_us.html" style="padding-left: 0px;margin-left: 15px;padding-right: 0px;margin-right: 10px;color: #fff;">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link otherpages" href="registration.php" style="padding-left: 0px;padding-right: 0px;margin-right: 15px;margin-left: 15px;color: #fff;">Registrations</a></li>
+                        <li class="nav-item"><a class="nav-link otherpages" href="registration.html" style="padding-left: 0px;padding-right: 0px;margin-right: 15px;margin-left: 15px;color: #fff;">Registrations</a></li>
                         <li class="nav-item"><a class="nav-link otherpages" href="departments.html" style="padding-left: 0px;padding-right: 0px;margin-right: 15px;margin-left: 15px;color: #fff;">Departments</a></li>
                         <li class="nav-item"><a class="nav-link otherpages" href="gallery.html" style="padding-right: 0px;padding-left: 0px;margin-right: 15px;margin-left: 15px;color: #fff;">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link otherpages" href="news_and_events.html" style="padding-right: 0px;padding-left: 0px;margin-left: 15px;color: #fff;">News/Events</a></li>
-                    </ul><a class="btn btn-primary" role="button" style="color: #ffffff;background: transparent;border-width: 0px;font-weight: 600;margin-left: 12px;" href="donate.php">Donate💌</a>
+                    </ul><a class="btn btn-primary" role="button" style="color: #ffffff;background: transparent;border-width: 0px;font-weight: 600;margin-left: 12px;" href="donate.html">Donate💌</a>
                 </div>
             </div>
         </nav>
@@ -202,31 +78,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2 style="margin-bottom: 50px;">Donate Here</h2>
         <div class="row">
             <div class="col">
-<form id="donate-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"
-    enctype="multipart/form-data">
-                        <div class="container donate-form" style="border-radius: 6px;padding: 20px;border: 1px solid rgb(129,129,129);">
+                <form>
+                    <div class="container donate-form" style="border-radius: 6px;padding: 20px;border: 1px solid rgb(129,129,129);">
                         <h6 id="form-title">DETAILS</h6>
                         <div class="row donate-text">
-                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Frist Name" name="firstname"></div>
-                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Last Name"name="lastname"></div>
+                            <div class="col-md-12 col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Frist Name"></div>
+                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Last Name"></div>
                         </div>
                         <div class="row donate-text">
-                            <div class="col-lg-6 txt-box"><input class="form-control" type="email" placeholder="Email Address" name="email"></div>
-                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Address" name="address"></div>
+                            <div class="col-lg-6 txt-box"><input class="form-control" type="email" placeholder="Email Address"></div>
+                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Address"></div>
                         </div>
                         <div class="row donate-text">
-                            <div class="col-lg-6 txt-box"><input class="form-control" type="text" placeholder="State" name="state"></div>
-                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Zip code" name="zipcode"></div>
+                            <div class="col-lg-6 txt-box"><input class="form-control" type="text" placeholder="State"></div>
+                            <div class="col-lg-6"><input class="form-control" type="text" placeholder="Zip code"></div>
                         </div>
                         <div class="row donate-text">
-                            <div class="col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Country" name="country"></div>
-                            <div class="col-lg-6"><input class="form-control" type="tel" placeholder="Phone Number" name="phonenumber"></div>
+                            <div class="col-lg-6 txt-box"><input class="form-control" type="text" placeholder="Country"></div>
+                            <div class="col-lg-6"><input class="form-control" type="tel" placeholder="Phone Number"></div>
                         </div>
                     </div>
                     <div class="container donate-form" style="margin-top: 25px;width: 700px;border-radius: 6px;padding: 20px;border: 1px solid rgb(129,129,129);">
                         <h6 id="form-title">AMOUNT</h6>
                         <div class="row donate-text">
-                            <div class="col-md-12 col-lg-12"><input class="form-control" type="text" placeholder="Enter Amount" name="amount"></div>
+                            <div class="col-md-12 col-lg-12"><input class="form-control" type="text" placeholder="Enter Amount"></div>
                         </div>
                     </div>
                     <div class="container donate-form" style="margin-top: 25px;width: 700px;border-radius: 6px;padding: 20px;border: 1px solid rgb(129,129,129);">
@@ -234,17 +109,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="row donate-text">
                             <div class="col-md-12 col-lg-4" style="display: flex;">
                                 <div style="padding: 2px;border: 1px solid rgb(98,98,98);border-right-width: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
-                                    <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-1" name="paymentmode" value="MOMO"><label class="form-check-label" for="formCheck-1">Momo</label></div>
+                                    <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Momo</label></div>
                                 </div>
                                 <div style="border: 1px solid rgb(98,98,98);padding: 2px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
-                                    <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-2" name="paymentmode " value="Cash"><label class="form-check-label" for="formCheck-2">Physical</label></div>
+                                    <div class="form-check" style="margin-right: 5px;margin-left: 20px;padding: 5px;"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Physical</label></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                     <div id="next-prev-buttons-2" class="button-row d-flex mt-4" style="margin:24px,24px,24px,24px ;">
-                        <button class="btn btn btn-primary ml-auto" id="btn-form" type="submit"
-                            title="Register">DONATE&nbsp;</button></div>
                 </form>
             </div>
         </div>
