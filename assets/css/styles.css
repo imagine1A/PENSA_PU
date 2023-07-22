@@ -527,6 +527,7 @@ h5 {
 @media (min-width: 576px) {
   #department-div {
     flex-direction: row;
+    width: auto;
   }
 }
 
@@ -946,7 +947,7 @@ h5 {
 
 body {
   font-size: 16px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans';
   width: 100%;
 }
 
@@ -1091,8 +1092,8 @@ a.nav-link.otherpages-1:hover::before {
 }
 
 .swiper-pagination-bullet {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   display: flex;
   flex-direction: column;
   text-align: center;
