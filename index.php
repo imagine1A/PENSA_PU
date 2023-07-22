@@ -1,7 +1,6 @@
 <?php
 
-$db = mysqli_connect("localhost", "root", "", "pensa");
-
+require_once("config.php");
 ?>
 
 

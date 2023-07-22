@@ -8,6 +8,8 @@ define('DB_NAME', 'pensa');
 
 /* Attempt to connect to MySQL database */
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
 
 // Check connection
 if ($conn === false) {
